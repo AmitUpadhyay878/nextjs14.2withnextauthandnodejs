@@ -8,6 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=20.14.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
     "next": "14.2.4",
