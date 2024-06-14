@@ -2,6 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+## node  20.14.0
+## Next-auth  library
+## iron-session library
+
 First, run the development server:
 
 ```bash
