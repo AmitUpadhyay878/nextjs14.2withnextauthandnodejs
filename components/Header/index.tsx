@@ -1,16 +1,18 @@
-'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React  from 'react'
 import { Navmenu } from '@/utils/StaticArrays/NavMenu'
-import { usePathname, useRouter } from 'next/navigation'
 
-const Header= () => {
+// import { usePathname, useRouter } from 'next/navigation'
+// import { getSesison } from '@/actions/action'
 
-  const [currentUser, setCurrentUser] = useState<boolean>(true)
-    const router = useRouter()
+const Header= async() => {
+
+
+ 
+const session = true;
 
   return (
-    <div className="grid min-h-[70px] w-full overflow-x-scroll rounded-lg lg:overflow-visible">
+    <div className="grid min-h-[70px] w-full overflow-x-scroll rounded-lg lg:overflow-hidden">
       <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll">
         <nav
           className="sticky top-5 z-10 block w-full max-w-full px-4 py-2 text-gray-950 bg-white border rounded-none shadow-md h-max border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
@@ -37,24 +39,23 @@ const Header= () => {
               </div>
               <div className="flex items-center gap-x-1">
                 {
-                  !currentUser ? (
+                  !session ? (
                     <>
-                    <button
+                    <Link
+                    href="/register"
                     className="hidden select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-                    type="button"
-                    onClick={()=>router.push("/register")}>
-                    <span>Register</span>
-                  </button>
-                  <button
-                    className="hidden select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-                    type="button"
-                    onClick={()=>router.push("/signin")}>
-                    <span>Sign in</span>
-                  </button> 
+                   >
+                    Register
+                  </Link>
+                  <Link
+                  href="/signin"
+                    className="hidden select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block">
+                  SignIn
+                  </Link> 
                     </>
                   ):(
                     <>
-                     <span className='mr-4 font-bold hover:text-red-500 hover:cursor-pointer '  onClick={()=>router.push("/my-profile")}>hello</span>
+                     <Link href="/my-profile"className='mr-4 font-bold hover:text-red-500 hover:cursor-pointer '>hello</Link>
                     <button
                     className="hidden select-none rounded-lg bg-gradient-to-tr from-red-900 to-red-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
                     type="button"

@@ -1,0 +1,10 @@
+# Create a Docker build command 
+    docker build -t my-image .
+
+# Docker container run command
+docker run -p 3000:3000 --name my-container my-image    
+
+ 1-   docker run: This is the base command to run a Docker container. Docker containers are standalone, executable packages that include everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
+ 2-   -p 3000:3000: This option maps the port 3000 of the container to port 3000 on the host machine. The structure is -p host_port:container_port. This means any traffic that comes into the host on port 3000 is forwarded to port 3000 in the container.
+ 3-   --name my-container: This assigns the name my-container to the running container. Naming containers is optional, but it’s a good practice to manage and reference them easily, especially when you have multiple containers running.
+ 4-   my-image: This specifies the image to create the container from. my-image should be the name of an image that is either locally available or can be pulled from an image repository like Docker Hub. This image acts as the base for the container, defining its contents, operating environment, and the commands that will be executed on startup.
