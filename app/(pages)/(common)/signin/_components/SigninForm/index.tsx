@@ -1,4 +1,5 @@
 'use client'
+import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -100,7 +101,7 @@ const SigninForm = () => {
             </button>
           </div>
         </form>
-      </div>
+        </div>
     </div>
   )
 }

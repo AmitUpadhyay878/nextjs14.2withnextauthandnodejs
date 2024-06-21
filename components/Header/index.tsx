@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React  from 'react'
 import { Navmenu } from '@/utils/StaticArrays/NavMenu'
+import Dashboard from '../Dashboard'
 
 // import { usePathname, useRouter } from 'next/navigation'
 // import { getSesison } from '@/actions/action'
@@ -9,7 +10,7 @@ const Header= async() => {
 
 
  
-const session = true;
+// const session = true;
 
   return (
     <div className="grid min-h-[70px] w-full overflow-x-scroll rounded-lg lg:overflow-hidden">
@@ -38,7 +39,7 @@ const session = true;
                 </ul>
               </div>
               <div className="flex items-center gap-x-1">
-                {
+                {/* {
                   !session ? (
                     <>
                     <Link
@@ -65,8 +66,8 @@ const session = true;
                   </button> 
                     </>
                   )
-                }
-              
+                } */}
+              <Dashboard />
                 
               </div>
               <button

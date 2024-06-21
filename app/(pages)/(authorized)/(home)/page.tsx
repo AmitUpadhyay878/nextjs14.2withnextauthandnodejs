@@ -14,7 +14,7 @@ export default async function Home() {
               <>
                 <p>{cc?.fields?.name}</p>
                 <p className='text-4xl'>{cc?.fields?.description}</p>
-                <Image
+                <img
                   src={`https:${cc?.fields?.image?.fields?.file?.url}`}
                   height={800}
                   width={500}
