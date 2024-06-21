@@ -37,8 +37,7 @@ const Dashboard = () => {
             </>
         ) : (
           <>
-          <p>hello user</p>
-            {/* <div className='flex space-x-2'> 
+            <div className='flex space-x-2'> 
             <button
               className='border border-black rounded-md px-5'
               onClick={() => signIn('google')}
@@ -51,7 +50,7 @@ const Dashboard = () => {
             >
               Signin with Github
             </button> 
-            </div>*/}
+            </div>
           </>
         )}
       </div>
