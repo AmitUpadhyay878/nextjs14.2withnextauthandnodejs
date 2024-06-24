@@ -1,0 +1,23 @@
+NODE_ENV=developer
+
+# mongo
+MONGODB_URI="mongodb+srv://amitupadhyay:Amit1234@nextjs14withmongoatlas.0xebtjq.mongodb.net/?retryWrites=true&w=majority"
+SECRET_KEY= "pntHSxGJGug6YkCFZPLh3VskT7dz2QIlyzIla4D6kGA="
+
+#contentful 
+CONTENTFUL_SPACE_ID="be8t325163xp"
+CONTENTFUL_ACCESS_TOKEN="wV03bKHWwEbhkaZLTq6qkUCAFhMp6jbHA0R8AuYxfBI"
+CONTENTFUL_PREVIEW_ACCESS_TOKEN="EYYzy09BJBKiuKM6n0QsHs0nJEFqi4lbMArcjTVcbFc"
+
+# #Next Auth
+# NEXT_AUTH_SECRET="z/ptJzxiPz4OmisXV2JxJxsujwFpEYRHyTzb4BgSPN8="
+# NEXT_AUTH_URL="http://localhost:3000/"
+
+# Github Auth
+GITHUB_ID=Ov23liE7FpSXhpKvMrGK
+GITHUB_SECRET=3666700163500daa86907a60977f4b7c93d1f770
+
+# Google Auth
+GOOGLE_CLIENT_ID=115642144178-924vljv3n3spi2bokk72ulqrstkch01s.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+# GOOGLE_REDIRECTURI="https://staging.multiqos.com:3021/"
